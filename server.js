@@ -13,7 +13,10 @@ mongoose.connect(
     'mongodb://localhost:27017/nodeapi', 
     { useNewUrlParser: true,
     useUnifiedTopology: true }
-);
+).catch(error => new Promise((resolve, reject) => {
+    console.log('MOTHER FUCKERRRRRRRRRRR!!!!')
+}));
+
 requireDir('./src/models'); 
 
 // Routes
